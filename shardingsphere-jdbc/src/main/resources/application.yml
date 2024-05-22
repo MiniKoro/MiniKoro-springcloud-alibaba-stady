@@ -1,0 +1,16 @@
+mybatis:
+    mapper-locations: classpath:mapper/*Mapper.xml
+server:
+    port: 8484
+spring:
+    application:
+        name: shardingsphere-jdbc-service
+    cloud:
+        nacos:
+            discovery:
+                server-addr: localhost:8848
+                username: nacos
+                password: nacos
+    datasource:
+        driver-class-name: org.apache.shardingsphere.driver.ShardingSphereDriver
+        url: jdbc:shardingsphere:classpath:sharding.yaml

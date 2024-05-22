@@ -1,0 +1,17 @@
+server:
+    port: 20000
+spring:
+    application:
+        name: minio-service
+    cloud:
+        nacos:
+            discovery:
+                password: nacos
+                server-addr: localhost:8848
+                username: nacos
+    datasource:
+        password: 654321
+        username: root
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://127.0.0.1:3306/blog?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false
+

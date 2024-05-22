@@ -1,0 +1,22 @@
+server:
+  port: 8383
+spring:
+  application:
+    name: id-service
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8080
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        username: nacos
+        password: nacos
+      config:
+        server-addr: 127.0.0.1:8848
+        username: nacos
+        password: nacos
+        namespace: eaed5f37-2b9d-494e-8dfb-f2d14cfad95c
+        group: DEFAULT_GROUP
+        file-extension: yml
+

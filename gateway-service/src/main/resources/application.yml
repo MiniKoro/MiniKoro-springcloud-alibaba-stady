@@ -1,0 +1,18 @@
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+        - id: consumer-service
+          uri: lb://consumer-service
+          predicates:
+            - Path=/consumer/**
+        - id: provider-service
+          uri: lb://provider-service
+          predicates:
+            - Path=/provider/**
+          filters:
+            - TestFilter

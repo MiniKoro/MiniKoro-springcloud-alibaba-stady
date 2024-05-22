@@ -1,0 +1,19 @@
+server:
+    port: 8585
+spring:
+    application:
+        name: redisson-service
+    cloud:
+        nacos:
+            discovery:
+                password: nacos
+                server-addr: localhost:8848
+                username: nacos
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        password: 654321
+        url: jdbc:mysql://127.0.0.1:3306/blog?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false
+        username: root
+    redis:
+        host: 127.0.0.1
+        port: 6379
